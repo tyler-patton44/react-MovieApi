@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+h2{
+  text-align: center;
+}
+.movieContain img{
+  display: block;
+  width: 50%;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
