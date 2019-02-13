@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+h1{
+  text-align: center;
+  color: whitesmoke;
+}
+form.form-inline.mt-2.mt-md-0{
+  display: block;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+}
+.contain{
+  width: 75%;
+  padding: 25px;
+  margin: 0 auto;
+  margin-top: 35px;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 15px rgba(255,255,255,0.7);
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Movie.css';
+import './Showmovie.css';
 
-class Movie extends Component {
+class Showmovie extends Component {
   render() {
     let list = this.props.movList.map((data, idx)=>{
       return <div className="movieContain" key={idx}>
@@ -14,11 +14,11 @@ class Movie extends Component {
       </div>
     })
     return (
-      <div className="movi">
+      <div className="showmovi">
         {list}
       </div>
     );
   }
 }
 
-export default Movie;
+export default Showmovie;

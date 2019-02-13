@@ -5,21 +5,23 @@
 body{
   background-color: rgba(0,0,0,0.9);
 }
-h1{
-  text-align: center;
-  color: whitesmoke;
-}
-form.form-inline.mt-2.mt-md-0{
+ul{
   display: block;
   text-align: center;
-  padding: 8px;
-  border-radius: 10px;
+  list-style: none;
 }
-.contain{
-  width: 75%;
-  padding: 25px;
-  margin: 0 auto;
-  margin-top: 35px;
-  background-color: whitesmoke;
-  box-shadow: 1px 1px 15px rgba(255,255,255,0.7);
+ul li{
+  display: inline-block;
+  margin-left: 15px;
+}
+ul li a{
+  color: whitesmoke;
+}
+ul li:first-child{
+  margin-left: 0;
+}
+ul li a:hover{
+  color: lightgreen;
+  cursor: pointer;
+  text-decoration: none;
 }

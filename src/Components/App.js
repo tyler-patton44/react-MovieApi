@@ -1,43 +1,30 @@
 import React, { Component } from 'react';
 import './App.css';
-import Movie from './Movie';
-import axios from 'axios';
+import Movie from './Movie/Movie';
+import Test from './Test/Test';
+import "react-router";
+import {
+  BrowserRouter,
+  Route,
+  Link
+} from 'react-router-dom'
+import Prop from "./Movie/Movie";
+import Event from "./Test/Test"
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      text: "",
-      movie: []
-    }
-  }
-  onInputChange = (event) => {
-    this.setState(
-      {text: event.target.value}
-    );
-  }
-  onFormSubmit = (event) => {
-    this.movie = [];
-    event.preventDefault();
-    axios.get("http://www.omdbapi.com/?t="+this.state.text+"&apikey=146c3f26")
-        // when we get a response, we will update state with the results of the request
-    .then((response) => (
-      this.setState({movie: [response.data]})
-    ));
-    this.setState({text: ""});
-  }
   render() {
     return (
       <div className="App">
-        <h1>Movie Data</h1>
-        <form className="form-inline mt-2 mt-md-0" onSubmit={this.onFormSubmit}>
-          <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" value={this.state.text} onChange={this.onInputChange} />
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
-        </form>
-
-        <div className="contain">
-          <Movie movList={this.state.movie} />
-        </div>
+        <BrowserRouter>
+          <div>
+              <ul>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/test">Test</Link></li>
+              </ul>
+              <Route exact path="/" component={Movie} />
+              <Route path="/test" component={Test} />                    
+          </div>
+      </BrowserRouter>
       </div>
     );
   }
